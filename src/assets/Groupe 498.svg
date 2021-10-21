@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+  <g id="Groupe_498" data-name="Groupe 498" transform="translate(-1259.341 -1018)">
+    <g id="Groupe_466" data-name="Groupe 466" transform="matrix(0.087, -0.996, 0.996, 0.087, 1275.609, 1051.286)">
+      <g id="Groupe_449" data-name="Groupe 449" transform="translate(13.541 0)">
+        <path id="Tracé_97" data-name="Tracé 97" d="M11.867,3.4,0,0,.589,8.422Z" fill="#0b5742"/>
+      </g>
+      <rect id="Rectangle_89" data-name="Rectangle 89" width="13.866" height="3.566" transform="matrix(0.998, -0.07, 0.07, 0.998, 0, 3.29)" fill="#0b5742"/>
+    </g>
+    <g id="Ellipse_14" data-name="Ellipse 14" transform="translate(1259.341 1018)" fill="none" stroke="#0b5742" stroke-width="3">
+      <circle cx="22" cy="22" r="22" stroke="none"/>
+      <circle cx="22" cy="22" r="20.5" fill="none"/>
+    </g>
+  </g>
+</svg>
