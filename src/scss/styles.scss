@@ -18,11 +18,28 @@
 	font-style: normal;
 }
 
-html{
+body{
   font-size: 16px;
+  line-height: 1.5;
 }
-
 h1{
   font-size: 2rem;
-  font-family: var(--blacker);
+}
+h2{
+  font-size: 1.8rem;
+}
+h3{
+  font-size: 1.6rem;
+}
+h4{
+  font-size: 1.4rem;
+}
+h5{
+  font-size: 1.2rem;
+}
+p:not(:last-child){
+  margin-bottom: 1em;
+}
+strong{
+  font-weight: 700;
 }
