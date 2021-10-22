@@ -2,3 +2,7 @@ mixin video(id, h, width, height)
   - var src = 'https://player.vimeo.com/video/' + id + '?h=' + h
   div.video
     iframe(src=src width=width height=height)
+    
+mixin download(link)
+  a(href=link)
+    span Télécharger la fiche
