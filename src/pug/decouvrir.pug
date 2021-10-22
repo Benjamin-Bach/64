@@ -1,7 +1,8 @@
 extends _layout.pug
-
-block title
-  title Découvrir les métiers de l'autonomie 
+  
+block layoutVariables
+  - var headTitle = "Découvrir les métiers de l'autonomie"
+  - var bodyClass = "decouvrir"
   
 block content
   main
@@ -12,4 +13,4 @@ block content
           span les métiers 
           span de l'autonomie 
         include ../content/p1-a1.html
-        <iframe src="https://player.vimeo.com/video/598886019?h=0c81472531" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        +video('598886019', '0c81472531', 640, 360)

@@ -1,0 +1,4 @@
+mixin video(id, h, width, height)
+  - var src = 'https://player.vimeo.com/video/' + id + '?h=' + h
+  div.video
+    iframe(src=src width=width height=height)

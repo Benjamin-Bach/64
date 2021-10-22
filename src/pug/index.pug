@@ -1,8 +1,9 @@
 extends _layout.pug
 
-block title
-  title Les Super-heros sont parfois discrets  
-  
+block layoutVariables
+  - var headTitle = "Les Super-heros sont parfois discrets"
+  - var bodyClass = "home"
+    
 block content
   main
     section

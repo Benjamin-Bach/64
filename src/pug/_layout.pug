@@ -1,18 +1,22 @@
+include _mixins.pug
+block layoutVariables
+
+doctype html
 html
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
-    block title
+    title #{headTitle}
     link(rel="stylesheet" href='https://use.typekit.net/pfi2qlq.css')
     link(rel="stylesheet" href='styles.css')
-    
-    
-  body
+      
+  body(class=(bodyClass || 'notwork'))
+  
     header
       h1 Les Super-heros sont parfois discrets
       include _main-menu.pug
-
-    block content
+      
+    block content  
     
     include _footer.pug
