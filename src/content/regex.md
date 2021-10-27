@@ -1,0 +1,3 @@
+- Convert md link to pug link :
+  - Search : \[(.*)\]\((.*)\)
+  - Replace : a(href="$2") $1
