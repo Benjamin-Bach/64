@@ -3,9 +3,39 @@
 /* vars */
 
 :root{
+
+  --unit: clamp(18px, 2.75vw, 24px);
+
   --condensed: 'oswald';
+  --europa: 'europa';
   --cooper: 'cooper-black-std';
   --blacker: 'Conv_Blacker-Pro-Display-Regular';
+
+  --white: white;
+  --black: black;
+
+  --grey1: #EFEDED;
+  --grey2: #A7A7A7;
+  --grey3: #707070;
+  --grey4: #343434;
+
+  --green1: #80EBCE;
+  --green2: #76EBCF;
+  --green3: #36D0A6;
+
+  --blue1: #2A96D4;
+  --blue2: #004B83;
+  --blue3: #1A4B7F;
+
+  --purple1: #D5B6FF;
+  --purple2: #C581D6;
+  --purple3: #AA5ABE;
+  --purple4: #615CF0;
+
+  --pink1: #FE2E6E;
+
+  --yellow1: #FFDA4F;
+
 }
 
 /* typo */
@@ -17,13 +47,21 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
+html{
+  font-size: var(--unit);
+}
 body{
-  font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.25;
+  font-family: var(--europa);
+  color: var(--blue3);
 }
 h1{
-  font-size: 2rem;
+  font-size: 1.833rem;
+  font-family: var(--blacker);
+  line-height: 1;
+  span{
+    display: block;
+  }
 }
 h2{
   font-size: 1.8rem;
@@ -37,9 +75,98 @@ h4{
 h5{
   font-size: 1.2rem;
 }
-p:not(:last-child){
+p:not(:last-child),
+ul:not(:last-child){
   margin-bottom: 1em;
 }
 strong{
   font-weight: 700;
+}
+
+/* Layout */
+
+body > *{
+  padding: 0 1rem;
+}
+
+/* Micro framework */
+
+.europa{
+  font-family: var(--europa);
+}
+.cooper{
+  font-family: var(--cooper);
+}
+
+.bigger-x250{
+  font-size: 250%;
+}
+
+/* Assets */
+
+/* Backgrounds, image and colors */
+
+.bg-blue-1{
+  background-color: var(--blue1);
+}
+.bg-green-3{
+  background-color: var(--green3);
+}
+.bg-grey-1{
+  background-color: var(--grey1);
+}
+.bg-grey-4{
+  background-color: var(--grey4);
+}
+
+@mixin bgBottom(){
+  background-repeat: no-repeat;
+  background-position: -1rem calc(100%);
+  background-size: 101vw;
+}
+@mixin bgTop(){
+  content:'';
+  display: block;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  transform: rotate(180deg);
+  @include bgBottom();
+}
+.bottom-L2R-5{
+  background-image: url('assets/bg/bottom-L2R-5.svg');
+  @include bgBottom();
+}
+.bottom-L2R-3{
+  background-image: url('assets/bg/bottom-L2R-3.svg');
+  @include bgBottom();
+}
+.bottom-R2L-3{
+  background-image: url('assets/bg/bottom-R2L-3.svg');
+  @include bgBottom();
+}
+.top-R2L-3{
+  position: relative;
+  &::before{
+    @include bgTop();
+    background-image: url('assets/bg/bottom-R2L-3.svg');
+  }
+  > *{
+    position: relative;
+    z-index: 1;
+  }
+}
+.top-L2R-5{
+  position: relative;
+  &::before{
+    @include bgTop();
+    background-image: url('assets/bg/bottom-L2R-5.svg');
+  }
+  > *{
+    position: relative;
+    z-index: 1;
+  }
 }
