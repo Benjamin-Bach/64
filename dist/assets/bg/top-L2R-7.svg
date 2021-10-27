@@ -1,0 +1,11 @@
+<svg class="bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 7">
+  <path
+    fill="red"
+    d="
+      M 0,0
+      l 100,7
+      l -100,0
+      z
+      "
+  ></path>
+</svg>
