@@ -6,7 +6,7 @@ block layoutVariables
   
 block content
   main
-    section
+    section.pt-3.bg-color(style="--bgColor:var(--purple1);")
       article
         h1
           span.cooper.bigger-x250 Se former 
@@ -15,8 +15,8 @@ block content
           strong Vous vous interrogez sur les formations qui vous permettraient de pouvoir accompagner Eugénie, Raymond ou Dolores dans les meilleures conditions? Votre profil correspond-il ?
         p Que vous soyez collégien, lycéen, inscrit dans une réflexion de reconversion professionnelle ou déjà en poste, à la recherche de nouvelles compétences ou d&#39;une valorisation de votre expérience, un large choix de voies d&#39;accès et de formations vous est offert.<br>Ces formations peuvent se faire en #[strong formation initiale, professionnelle, complète ou partielle, mais aussi par la voie de l&#39;alternance], qui présente l&#39;avantage de conjuguer formation théorique et pratique auprès de professionnels expérimentés.
         img(src="#")
-    
-    section
+      include ../../dist/assets/bg/top-L2R-5.svg
+    section.pt-3.pb-3
       article
         h2 Se former au métier d&#39;infirmier
         p La profession d&#39;Infirmier Diplômé d&#39;Etat (IDE) appartient à la catégorie des professionnels de santé : seul les #[strong instituts de formation en soins infirmiers (IFSI)] rattachés à un centre hospitalier peuvent préparer à ce diplôme qui s&#39;exerce dans le cadre d&#39;un #[a(href='https://solidarites-sante.gouv.fr/IMG/pdf/arrete_du_31_juillet_2009_annexe_2.pdf') référentiel de compétences réglementaire].
@@ -168,7 +168,7 @@ block content
           li
             a(href='https://www.its-pau.fr/formation/me') ITS Pierre BOURDIEU
   aside
-    section
+    section.pt-3.pb-3.bg-color(style="--bgColor:var(--purple2);")
       h2
         span Découvrir les
         span aides
@@ -205,7 +205,7 @@ block content
             a(href='https://www.cap-metiers.fr/qui-fait-quoi-en-nouvelle-aquitaine?q=&amp;hPP=10&amp;idx=KIFEKOI&amp;p=0&amp;dFR%5BCOORDONNEES.DEPARTEMENT%5D%5B0%5D=Pyr%C3%A9n%C3%A9es-Atlantiques') CAP&#39;METIERS Nouvelle Aquitaine
       article
         img(src='#')
-    section
+    section.pt-3.pb-3.bg-color(style="--bgColor:var(--grey1);")
       article
         a(href='#')
           span Découvrir 
@@ -213,4 +213,6 @@ block content
         a(href='#')
           span Exercer 
           span les métiers de l'autonomie
-        +superheros
+    section.pb-3.bg-color(style="--bgColor:var(--green3);")
+      include ../../dist/assets/bg/top-R2L-7.svg
+      +superheros

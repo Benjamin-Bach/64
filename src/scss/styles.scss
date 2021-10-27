@@ -64,29 +64,44 @@ h1{
   }
 }
 h2{
-  font-size: 1.8rem;
+  font-size: 1.35rem;
 }
 h3{
-  font-size: 1.6rem;
-}
-h4{
-  font-size: 1.4rem;
-}
-h5{
   font-size: 1.2rem;
 }
+h4{
+  font-size: 1.1rem;
+}
+
 p:not(:last-child),
 ul:not(:last-child){
   margin-bottom: 1em;
 }
+li{
+  list-style-position: inside;
+}
 strong{
   font-weight: 700;
+  color: var(--purple3);
+}
+a{
+  color: var(--purple4);
+  &:hover{
+    color: var(--blue3);
+  }
 }
 
 /* Layout */
 
 body > *{
   padding: 0 1rem;
+}
+section > h2,
+article{
+  padding: 0 var(--unit);
+}
+article{
+  margin-bottom: calc(var(--unit) * 3);
 }
 
 /* Micro framework */
@@ -102,16 +117,31 @@ body > *{
   font-size: 250%;
 }
 
+/* Margin and padding */
+$unit: var(--unit);
+@for $i from 1 through 3{
+  .m-#{$i}{ margin: calc(#{$unit} * #{$i}); }
+  .mt-#{$i}{ margin-top: calc(#{$unit} * #{$i}); }
+  .ml-#{$i}{ margin-left: calc(#{$unit} * #{$i}); }
+  .mb-#{$i}{ margin-bottom: calc(#{$unit} * #{$i}); }
+  .mr-#{$i}{ margin-right: calc(#{$unit} * #{$i}); }
+  .p-#{$i}{ padding: calc(#{$unit} * #{$i}); }
+  .pt-#{$i}{ padding-top: calc(#{$unit} * #{$i}); }
+  .pl-#{$i}{ padding-left: calc(#{$unit} * #{$i}); }
+  .pb-#{$i}{ padding-bottom: calc(#{$unit} * #{$i}); }
+  .pr-#{$i}{ padding-right: calc(#{$unit} * #{$i}); }
+}
+
 /* Assets */
 
 /* Backgrounds, image and colors */
 
 .bg-color{
   background-color: var(--bgColor);
-
   svg{
     &.bg{
       display: block;
+      overflow: visible;
       &:first-child{
         transform: translateY(-98%);
       }
