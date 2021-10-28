@@ -139,6 +139,9 @@ article{
   @media(min-width: 600px){
     font-size: 250%;
   }
+  @media(max-width: 400px){
+    font-size: 150%;
+  }
 }
 .bigger-x200{
   font-size: 150%;
@@ -249,7 +252,7 @@ $unit: var(--unitMarge);
   }
 }
 
-/* Assets */
+/* Assets generics */
 
 .video{
   position: relative;
@@ -324,6 +327,7 @@ $unit: var(--unitMarge);
     line-height: .9;
   }
 }
+
 /* Backgrounds, image and colors */
 
 .bg-color{
@@ -341,6 +345,87 @@ $unit: var(--unitMarge);
       path{
         fill: var(--bgColor);
       }
+    }
+  }
+}
+
+/* Components */
+
+header{
+
+  .superheros-text{
+    font-size: .8rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    @media(min-width: 600px){
+      margin:0;
+      transform: translateY(120%);
+    }
+  }
+  nav{
+    a{
+      text-decoration: none;
+    }
+    ul{
+      display: flex;
+      flex-direction: column;
+      @media(min-width: 600px){
+        flex-direction: row;
+        align-items: center;
+        gap: .5rem;
+      }
+    }
+    li:not(:last-of-type){
+      text-transform: uppercase;
+      font-family: var(--condensed);
+      font-weight: 700;
+      font-size: .9rem;
+      white-space: nowrap;
+      @media(min-width: 960px){
+        font-size: .75rem;
+      }
+      a{
+        color: var(--blue2);
+      }
+    }
+    li:last-of-type{
+      align-self: flex-end;
+      transform: translateY(-1rem);
+      @media(max-width: 599px){
+        transform: translateY(0);
+      }
+      @media(min-width: 1040px){
+        transform: translateY(0);
+      }
+      @media(min-width: 600px){
+        margin-left: auto;
+      }
+      a{
+        color: var(--blue1);
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: right;
+        svg{
+          margin-left: 1em;
+        }
+      }
+    }
+  }
+  @media(min-width: 1040px){
+    display: flex;
+    align-items: center;
+    .superheros-text{
+      border-right: 1px solid var(--blue2);
+      margin-bottom: 0;
+      margin-right: .8rem;
+      padding: .25em 0;
+      padding-right: .8rem;
+      transform: translateY(0);
+    }
+    nav{
+      flex-grow: 1;
     }
   }
 }
