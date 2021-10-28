@@ -516,7 +516,55 @@ footer{
 /* Home page */
 
 .home{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  header{
+    width: 100%;
+  }
+  main, section, article{
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      padding: 0;
+  }
+  section{
+    position: relative;
+    overflow: hidden;
+    .superheros{
+      position: absolute;
+      transform: translate(-3.5rem, -4.55rem);
+    }
+  }
+  article{
+    max-width: 100%;
+    padding: 0 1.25rem;;
+    margin: 0;
 
+    img{
+      flex-grow: 1;
+      object-fit: cover;
+    }
+    h1{
+      position: absolute;
+      text-align: right;
+      right: 0;
+      bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      span{
+        background-color: var(--green3);
+        padding: 1em 1.25rem;
+        letter-spacing: .05em;
+        &:last-of-type{
+          background-color: var(--white);
+          color: var(--purple2);
+          font-weight: 700;
+        }
+      }
+    }
+  }
 }
 
 /* Page découvrir */
