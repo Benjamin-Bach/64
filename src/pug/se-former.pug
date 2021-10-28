@@ -8,7 +8,7 @@ block content
   main
     section.pt-3.bg-color(style="--bgColor:var(--purple1);")
       article
-        h1
+        h1.mb-3
           span.white.cooper.bigger-x250 Se former 
           span aux métiers<br>de l'autonomie
         p
@@ -207,12 +207,12 @@ block content
         img(src='#')
     section.pt-3.pb-3.bg-color(style="--bgColor:var(--grey1);")
       article
-        a(href='#')
-          span Découvrir 
-          span les métiers de l'autonomie
-        a(href='#')
-          span Exercer 
-          span les métiers de l'autonomie
+        a.btn.big-btn(href='decouvrir.html')
+          span.block.cooper Découvrir 
+          span.block.condensed les métiers de l'autonomie
+        a.btn.big-btn(href='exercer.html')
+          span.block.cooper Exercer 
+          span.block.condensed les métiers de l'autonomie
     section.pb-3.bg-color(style="--bgColor:var(--green3);")
       include ../../dist/assets/bg/top-R2L-7.svg
       +superheros

@@ -1,15 +1,18 @@
 mixin video(id, h, width, height)
   - var src = 'https://player.vimeo.com/video/' + id + '?h=' + h
-  div.video
-    iframe(src=src width=width height=height)
+  - var paddingT = 'padding-top:' + (height * 100 / width) + '%'
+  div.video(style=paddingT)
+    iframe(src=src)
     
 mixin download(link)
-  a(href=link)
+  a(href=link).download
     span Télécharger la fiche
+    div.svg-bg
     
 mixin superheros
   h2.superheros
-    span Les 
-    span Super<br>héros 
-    span sont parfois 
-    span discrets
+    span.blacker.block Les 
+    span.cooper.block.bigger-x200.purple2 Super
+    span.cooper.block.bigger-x200.purple2.l-spaced héros 
+    span.blacker.block sont parfois 
+    span.cooper.block.bigger-x125.purple2 discrets
