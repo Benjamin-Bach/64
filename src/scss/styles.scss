@@ -59,15 +59,18 @@ h1{
   font-size: 1.833rem;
   font-family: var(--blacker);
   line-height: 1;
+  margin-bottom: .5em;
   span{
     display: block;
   }
 }
-h2{
+h2, .h2{
   font-size: 1.35rem;
+  margin-bottom: .5em;
 }
 h3{
   font-size: 1.2rem;
+  margin-bottom: .5em;
 }
 h4{
   font-size: 1.1rem;
@@ -80,9 +83,14 @@ ul:not(:last-child){
 li{
   list-style-position: inside;
 }
-strong{
+strong, .strong{
   font-weight: 700;
   color: var(--purple3);
+}
+.just-strong{
+  @extend .strong;
+  font-size: 1rem;
+  margin-bottom: 0;
 }
 a{
   color: var(--purple4);
@@ -112,12 +120,25 @@ article{
 .cooper{
   font-family: var(--cooper);
 }
+.condensed{
+  font-family: var(--condensed);
+}
 
 .bigger-x250{
-  font-size: 250%;
+  font-size: 175%;
+  @media(min-width: 600px){
+    font-size: 250%;
+  }
+}
+.bigger-x150{
+  font-size: 125%;
+  @media(min-width: 600px){
+    font-size: 150%;
+  }
 }
 
 /* Margin and padding */
+
 $unit: var(--unit);
 @for $i from 1 through 3{
   .m-#{$i}{ margin: calc(#{$unit} * #{$i}); }
@@ -130,6 +151,59 @@ $unit: var(--unit);
   .pl-#{$i}{ padding-left: calc(#{$unit} * #{$i}); }
   .pb-#{$i}{ padding-bottom: calc(#{$unit} * #{$i}); }
   .pr-#{$i}{ padding-right: calc(#{$unit} * #{$i}); }
+}
+
+/* Font colors */
+
+.white{
+  color: var(--white);
+  *{
+    color: var(--white);
+  }
+}
+.blue3{
+  color: var(--blue3);
+  *{
+    color: var(--blue3);
+  }
+}
+
+.inverted{
+  background-color: var(--white);
+  color: var(--bgColor, var(--white));
+  font-family: var(--condensed);
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1rem;
+  @media(min-width: 960px){
+
+    font-size: .9rem;
+  }
+  padding: .25rem .75rem;
+  &.green{
+    background-color: var(--green3);
+  }
+}
+.under{
+  position: relative;
+  span{
+    position: relative;
+    z-index: 1;
+    @media(min-width: 400px){
+      white-space: nowrap;
+    }
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    display: block;
+    top: .75em;
+    left: 0;
+    z-index: 0;
+    height: .55em;
+    width: 100%;
+    background-color: var(--underColor, var(--green1));
+  }
 }
 
 /* Assets */
