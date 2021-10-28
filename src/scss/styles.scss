@@ -277,6 +277,13 @@ $unit: var(--unitMarge);
   padding: 2rem 0 2rem 2rem;
   transform: translateX(-2rem);
 }
+.yellow-star{
+  background: url('assets/bg/yellow-star.svg') no-repeat;
+  background-size: contain;
+  padding: 1rem 0 1rem 2rem;
+  transform: translateX(-2rem);
+  margin-bottom: 0;
+}
 .shadow{
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
@@ -356,7 +363,6 @@ $unit: var(--unitMarge);
     line-height: .9;
   }
 }
-
 @mixin superheros(){
   position: relative;
   z-index: 0;
@@ -373,7 +379,13 @@ $unit: var(--unitMarge);
     }
   }
 }
-
+.yellow-tick{
+  display: inline-block;
+  width: 2.5em;
+  height: 1em;
+  margin-right: .5em;
+  background-color: var(--yellow1);
+}
 /* Backgrounds, image and colors */
 
 .bg-color{
@@ -673,6 +685,111 @@ footer{
           order: -1;
         }
       }
+    }
+  }
+}
+
+/* Page "Se former" */
+
+.se-former{
+  h1 span:last-of-type{
+    display: inline-block;
+    background: url('assets/bg/sun-2.svg') no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding-bottom: 1rem;
+  }
+  main{
+    section:first-of-type{
+      background-image: url('assets/bg/splash-points-white.png');
+      background-repeat: no-repeat;
+      background-position: calc(100% + 100px) -100px;
+      article:first-of-type{
+        position: relative;
+        padding-bottom: 3rem;
+        img{
+          position: absolute;
+          z-index: 10;
+          transform: translateY(100%);
+          bottom: 0;
+          width: calc(100% - 2.5rem);
+
+        }
+      }
+    }
+    section:nth-of-type(2){
+      > article:first-of-type{
+        padding-top: calc(56.25% / 2 + 4rem);
+        @media(min-width: 1024px){
+          padding-top: calc(576px / 2 + 6rem);
+        }
+      }
+    }
+  }
+  aside{
+    section:first-of-type{
+      background-image: url('assets/bg/sun-2.svg');
+      background-repeat: no-repeat;
+      background-position: calc(100% + 190px) -190px;
+      padding-bottom: 1.25rem;
+      article:last-of-type{
+        margin-bottom: 0;
+      }
+      @media(min-width: 1024px){
+        background-position: calc(50% - 50px) -190px;
+        padding-bottom: 0;
+        display: flex;
+        h2{
+          margin-bottom: 1em;
+        }
+        article:first-of-type{
+          margin-bottom: 0;
+        }
+        article:last-of-type{
+          padding: 0;
+          margin: 0;
+          display: flex;
+          img{
+            object-fit: cover;
+          }
+        }
+      }
+      article:first-of-type{
+        padding-top: 2rem;
+        h2{
+          text-align: right;
+          .cooper{
+            line-height: 1;
+          }
+        }
+        h3.inverted{
+          color: var(--purple3);
+
+        }
+        ul{
+          margin-left: calc(3rem + .25em);
+          margin-bottom: 2rem;
+        }
+      }
+    }
+    section:nth-of-type(2){
+      background-image: url('assets/bg/star-points-yellow.png');
+      background-repeat: no-repeat;
+      background-position: left center;
+      article{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        z-index: 2;
+        a.btn{
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    section:last-of-type{
+      @include superheros();
+      padding-bottom: 4rem;
     }
   }
 }
