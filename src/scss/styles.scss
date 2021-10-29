@@ -1180,9 +1180,9 @@ html{
           flex-basis: 50%;
           max-width: calc((var(--maxWidth) - 2rem) / 2);
         }
-        article:last-of-type{
-          padding-bottom: 15rem;
-        }
+      }
+      article:last-of-type{
+        padding-bottom: 12rem;
       }
     }
     section:nth-of-type(4){
