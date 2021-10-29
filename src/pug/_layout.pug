@@ -15,9 +15,13 @@ html
   
     header.pt-1.pb-1
       if bodyClass != 'home'
-        span.superheros-text.blacker.mb-1.block Les Super-héros sont parfois discrets
+        span.superheros-text.blacker.block Les Super-héros sont parfois discrets
       include _main-menu.pug
+      span.toggle-menu.block
+        div
+        div
       
     block content  
     
     include _footer.pug
+    script(src="app.js")
