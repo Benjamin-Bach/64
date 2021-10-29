@@ -1,6 +1,6 @@
 <svg class="bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 3">
   <path
-    fill="red"
+    fill="transparent"
     d="
       M 0,0
       l 100,3

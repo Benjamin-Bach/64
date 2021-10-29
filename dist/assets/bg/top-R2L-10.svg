@@ -1,0 +1,11 @@
+<svg class="bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10">
+  <path
+    fill="transparent"
+    d="
+      M 0,10
+      l 100,-10
+      l -0,10
+      z
+      "
+  ></path>
+</svg>

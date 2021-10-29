@@ -15,13 +15,16 @@ html
   
     header.pt-1.pb-1
       if bodyClass != 'home'
-        span.superheros-text.blacker.block Les Super-héros sont parfois discrets
+        span.superheros-text.blacker.block
+          a(href="/") Les Super-héros sont parfois discrets
       include _main-menu.pug
       span.toggle-menu.block
         div
         div
       
     block content  
+    
+    a.scroll-to-top(href="#")
     
     include _footer.pug
     script(src="app.js")

@@ -5,14 +5,14 @@ mixin video(id, h, width, height)
     iframe(src=src)
     
 mixin download(link)
-  a(href=link).download
+  a(target="_blank" href=link).download
     span Télécharger la fiche
     div.svg-bg
     
 mixin superheros
   h2.superheros
     span.blacker.block Les 
-    span.cooper.block.bigger-x200.purple2 Super
+    span.cooper.block.bigger-x200.purple2 super
     span.cooper.block.bigger-x200.purple2.l-spaced héros 
     span.blacker.block sont parfois 
     span.cooper.block.bigger-x125.purple2 discrets
