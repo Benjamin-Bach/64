@@ -9,3 +9,11 @@ document.querySelectorAll('.main-menu li a').forEach((item, i) => {
     item.parentElement.classList.add('active');
   }
 });
+
+if(document.location.hash == '#broken'){
+
+  document.querySelectorAll('a[href="#"], a[href$=".docx"]').forEach((item, i) => {
+    item.classList.add('broken-link')
+  });
+
+}
