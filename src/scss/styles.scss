@@ -679,9 +679,10 @@ html{
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  header{
+  header, main{
     width: 100%;
   }
+
   main, section, article{
       display: flex;
       flex-direction: column;
@@ -693,6 +694,7 @@ html{
     overflow: hidden;
     .superheros{
       position: absolute;
+      z-index: 5;
       transform: translate(-3.5rem, -4.55rem);
       background-image: url('assets/bg/superheros-noshadow.svg');
     }
@@ -709,13 +711,76 @@ html{
     max-width: 100%;
     padding: 0 1.25rem;;
     margin: 0;
-
-    img{
+    .slider{
+      position: relative;
       flex-grow: 1;
-      object-fit: cover;
+    }
+    picture{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 0;
+      display: flex;
+      img{
+        object-fit: cover;
+      }
+    }
+    @keyframes animatePictureA{
+      0%{
+        opacity: 1;
+      }
+      31%{
+        opacity: 1;
+      }
+      35%{
+        opacity: 0;
+      }
+      96%{
+        opacity: 0;
+      }
+      100%{
+        opacity: 1;
+      }
+    }
+    picture:nth-child(1){
+      animation-name: animatePictureA;
+      animation-duration: 12s;
+      animation-iteration-count: infinite;
+      z-index: 2;
+    }
+    @keyframes animatePictureB{
+      0%{
+        opacity: 0;
+      }
+      31%{
+        opacity: 0;
+      }
+      35%{
+        opacity: 1;
+      }
+      64%{
+        opacity: 1;
+      }
+      68%{
+        opacity: 0;
+      }
+      100%{
+        opacity: 0;
+      }
+    }
+    picture:nth-child(2){
+      animation-name: animatePictureB;
+      animation-duration: 12s;
+      animation-iteration-count: infinite;
+      z-index: 1;
     }
     h1{
       position: absolute;
+      z-index: 4;
       text-align: right;
       right: 0;
       bottom: 2rem;
@@ -834,7 +899,7 @@ html{
               grid-area: img;
               position: absolute;
               z-index: 0;
-              transform: rotate(-15deg) translate(-50%, -50%) scale(1.5);
+              transform: rotate(-15deg) translate(-75%, -50%) scale(1.6);
             }
             p{
               grid-area: first;
@@ -877,7 +942,7 @@ html{
               img{
                 position: absolute;
                 z-index: 1;
-                transform: rotate(-15deg) translate(-50%, -60%) scale(1.25);
+                transform: rotate(-15deg) translate(-50%, -40%) scale(1.25);
                 &:last-of-type{
                   transform: rotate(10deg) translate(-15%, 100%) scale(1.15);
                   z-index: 0;
@@ -929,6 +994,7 @@ html{
     }
     @media (min-width: 960px){
       article{
+        max-width: 1100px;
         &:first-of-type{
           margin-top: 3rem;
         }
@@ -937,7 +1003,7 @@ html{
         gap: 3rem;
         align-items: flex-end;
         > a{
-          flex-basis: 580px;
+          flex-basis: 540px;
           .mb-1{
             margin-bottom: 0;
           }
