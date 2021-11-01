@@ -64,6 +64,9 @@ h1{
   span{
     display: block;
   }
+  @media (max-width: 800px){
+    margin: 2rem auto !important;
+  }
 }
 h2, .h2{
   font-size: 1.35rem;
@@ -113,7 +116,10 @@ body{
 }
 
 body > *{
-  padding: 0 1.25rem;
+  padding: 0 0.75rem;
+  @media(min-width: 400px){
+    padding: 0 1.25rem;
+  }
   &:is(header,main,section,aside),
   &:is(footer) nav{
     margin-right: auto;
@@ -201,26 +207,34 @@ $unit: var(--unitMarge);
   &.green{
     background-color: var(--green3);
   }
+
 }
 .under{
   position: relative;
   span{
     position: relative;
     z-index: 1;
-    @media(min-width: 400px){
+    @media(min-width: 420px){
       white-space: nowrap;
     }
+    @media(max-width: 419px){
+      text-decoration: underline;
+      text-decoration-color: var(--underColor, var(--green1));
+    }
   }
-  &::after{
-    content: '';
-    position: absolute;
-    display: block;
-    top: .75em;
-    left: 0;
-    z-index: 0;
-    height: .55em;
-    width: 100%;
-    background-color: var(--underColor, var(--green1));
+  @media(min-width: 420px){
+
+    &::after{
+      content: '';
+      position: absolute;
+      display: block;
+      top: .75em;
+      left: 0;
+      z-index: 0;
+      height: .55em;
+      width: 100%;
+      background-color: var(--underColor, var(--green1));
+    }
   }
 }
 
@@ -340,6 +354,10 @@ $unit: var(--unitMarge);
     font-size: 1.2rem;
     padding: 1.25em 2.5em;
     border-radius: 2.5em;
+    @media (max-width: 420px){
+      font-size: 1rem;
+      padding: 1.2rem;
+    }
   }
 }
 .download{
@@ -608,8 +626,8 @@ header{
 
 
 footer{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
   ul{
     display: flex;
     font-size: .9rem;
@@ -721,11 +739,13 @@ html{
       left: 0;
       right: 0;
       bottom: 0;
-      height: 100%;
+      //transform: translateX(-50%);
+      min-height: 100%;
       width: 100%;
       z-index: 0;
       display: flex;
       img{
+        width: 100%;
         object-fit: cover;
       }
     }
@@ -779,6 +799,7 @@ html{
       z-index: 1;
     }
     h1{
+      margin-bottom: 0;
       position: absolute;
       z-index: 4;
       text-align: right;
@@ -841,6 +862,12 @@ html{
         padding-top: calc(56.25% / 2 + 4rem);
         @media(min-width: 1024px){
           padding-top: calc(675px / 2 + 6rem);
+        }
+        @media(max-width: 960px){
+          p:last-of-type{
+            margin-top: 2rem !important;
+          }
+
         }
       }
       .card{
@@ -1169,6 +1196,13 @@ html{
 
 .exercer{
   main{
+
+    @media(max-width: 960px){
+      a.btn{
+        margin-bottom: 3rem !important;
+      }
+
+    }
     section:nth-of-type(2){
       article:first-of-type{
         @media(min-width: 960px){
@@ -1196,12 +1230,19 @@ html{
       article:last-of-type{
         h3{
           .yellow-tick{
+            + .inverted{
 
+              position: relative;
+              z-index: 1;
+            }
             &.dont{
               width: 0px;
               height: 0px;
               + *{
                 margin-left: calc(65px + 0.3rem);
+                margin-top: -.5rem;
+                position: relative;
+                z-index: 0;
               }
             }
           }
@@ -1247,6 +1288,12 @@ html{
           max-width: calc((var(--maxWidth) - 2rem) / 2);
         }
       }
+      @media(max-width: 960px){
+        article:first-of-type{
+          margin-top: 2rem !important;
+        }
+
+      }
       article:last-of-type{
         padding-bottom: 12rem;
       }
@@ -1273,6 +1320,9 @@ html{
         z-index: 2;
         transform: translateY(-12rem);
         padding-bottom: 12rem;
+        @media(max-width: 960px){
+          padding-bottom: 6rem;
+        }
         margin-bottom: -12rem;
       }
 
