@@ -39,6 +39,34 @@
 
 }
 
+body.hight-contrasted{
+  --blue2: black;
+  --blue3: black;
+  --purple2: black;
+  --purple3: black;
+  // $green3: lighten(#36D0A6, 40%);
+  // --green3: #{$green3};
+  .bg-color{
+    --bgColor: #dedede !important;
+  }
+  .white, .white *, .inverted{
+    color: black !important;
+  }
+  header nav .active{
+    background-image: none !important;
+  }
+  a{
+    color: black !important;
+    text-decoration: underline !important;
+  }
+  footer{
+    background-color: black;
+    a{
+      color: white !important;
+    }
+  }
+}
+
 /* typo */
 
 @font-face {

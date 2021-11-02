@@ -17,3 +17,24 @@ if(document.location.hash == '#broken'){
   });
 
 }
+
+function checkContrastPref(){
+  if(localStorage.getItem('hc') == 'true'){
+    body.classList.add('hight-contrasted')
+  }else{
+    body.classList.remove('hight-contrasted')
+  }
+}
+checkContrastPref()
+
+document.querySelector('a.contrast').addEventListener('click', (e)=>{
+  e.preventDefault()
+
+
+  if(localStorage.getItem('hc') == 'true'){
+    localStorage.setItem('hc',false)
+  }else{
+    localStorage.setItem('hc',true)
+  }
+  checkContrastPref()
+})
