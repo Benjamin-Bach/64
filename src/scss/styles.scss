@@ -218,8 +218,7 @@ $unit: var(--unitMarge);
       white-space: nowrap;
     }
     @media(max-width: 419px){
-      text-decoration: underline;
-      text-decoration-color: var(--underColor, var(--green1));
+      border-bottom: 3px solid var(--underColor, var(--green1))
     }
   }
   @media(min-width: 420px){
