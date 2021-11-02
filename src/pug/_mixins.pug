@@ -1,8 +1,8 @@
-mixin video(id, h, width, height)
+mixin video(id, h, width, height, altText)
   - var src = 'https://player.vimeo.com/video/' + id + '?h=' + h
   - var paddingT = 'padding-top:' + (height * 100 / width) + '%'
   div.video(style=paddingT)
-    iframe(src=src)
+    iframe(src=src title=altText)
     
 mixin download(link)
   a(target="_blank" href=link).download
