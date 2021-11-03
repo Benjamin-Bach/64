@@ -487,6 +487,7 @@ header{
     width: 100%;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
     & + *{
       margin-top: 75px;
     }
@@ -498,6 +499,7 @@ header{
   .superheros-text{
     font-size: .8rem;
     font-weight: 700;
+    margin-right: 1rem;
     a{
       text-decoration: none;
       color: var(--blue2);
@@ -509,6 +511,41 @@ header{
       border-right: 1px solid var(--blue2);
       margin-right: .8rem;
       padding-right: .8rem;
+    }
+  }
+  div.access-64-mobile{
+    flex-basis: 100%;
+    line-height: 1;
+    margin-top: -.5rem;
+    a{
+      color: var(--blue1);
+      text-decoration: none;
+      &:hover{
+        color: var(--green3);
+      }
+    }
+    @media (min-width: 640px){
+      display: none;
+    }
+  }
+
+  .site-64{
+
+    margin-left: auto;
+    a{
+      color: var(--blue1);
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: right;
+      text-decoration: none;
+      svg{
+        margin-left: 1em;
+      }
+    }
+    a:hover{
+      color: var(--purple3);
     }
   }
   .toggle-menu{
@@ -563,7 +600,6 @@ header{
       justify-content: center;
       ul.main-menu{
         text-align: center;
-        margin-top: auto;
         margin-bottom: auto;
         li{
 
@@ -572,9 +608,10 @@ header{
         }
       }
       span.site-64{
+        order: -1;
         margin-left: 0;
         margin-top: auto;
-        margin-bottom: auto;
+        margin-bottom: 2rem;
       }
     }
     a{
@@ -605,24 +642,7 @@ header{
         }
       }
     }
-    .site-64{
 
-      margin-left: auto;
-      a{
-        color: var(--blue1);
-        display: flex;
-        align-items: center;
-        font-size: 14px;
-        font-weight: 700;
-        text-align: right;
-        svg{
-          margin-left: 1em;
-        }
-      }
-      a:hover{
-        color: var(--purple3);
-      }
-    }
   }
 
 }
@@ -722,6 +742,13 @@ section.big-cta{
 /* Home page */
 
 .home{
+  div.access-64-mobile{
+    order: -1;
+    flex-basis: unset;
+    flex-grow: 1;
+    text-align: right;
+    padding-right: 1rem;
+  }
   .scroll-to-top{
     display: none;
   }
@@ -881,7 +908,7 @@ section.big-cta{
     section{
       overflow: visible;
       .superheros{
-        transform: translate(-3.25rem,-7rem);
+        transform: translate(-3.25rem,-7.25rem);
         padding: 3em;
         display: none;
       }
