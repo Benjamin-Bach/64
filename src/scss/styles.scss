@@ -699,6 +699,26 @@ html{
   }
 }
 
+section.big-cta{
+  article{
+    background-image: url('assets/bg/star-points-yellow.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+    a.btn{
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 600px){
+      padding-top: 3rem;
+      padding-bottom: 6rem;
+    }
+  }
+}
+
 /* Home page */
 
 .home{
@@ -1188,25 +1208,7 @@ html{
         }
       }
     }
-    section:nth-of-type(2){
-      article{
-        background-image: url('assets/bg/star-points-yellow.png');
-        background-repeat: no-repeat;
-        background-position: left bottom;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        position: relative;
-        z-index: 2;
-        a.btn{
-          margin-bottom: 1rem;
-        }
-        @media (max-width: 600px){
-          padding-top: 3rem;
-          padding-bottom: 6rem;
-        }
-      }
-    }
+
     section:last-of-type{
       @include superheros();
       @media (max-width: 600px){
@@ -1225,7 +1227,7 @@ html{
   main{
 
     @media(max-width: 960px){
-      a.btn{
+      a.btn:not(.big-btn){
         margin-bottom: 3rem !important;
       }
 
@@ -1311,8 +1313,9 @@ html{
         }
         > article{
           margin: 0;
-          flex-basis: 50%;
-          max-width: calc((var(--maxWidth) - 2rem) / 2);
+          // flex-basis: 50%;
+          //max-width: calc((var(--maxWidth) - 2rem) / 2);
+          max-width: calc(var(--maxWidth) - 2rem);
         }
       }
       @media(max-width: 960px){
