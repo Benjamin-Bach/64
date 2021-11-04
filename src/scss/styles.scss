@@ -71,8 +71,8 @@ body.hight-contrasted{
 
 @font-face {
 	font-family: 'Conv_Blacker-Pro-Display-Regular';
-	src: url('assets/fonts/Blacker-Pro-Display-Regular.eot');
-	src: local('☺'), url('assets/fonts/Blacker-Pro-Display-Regular.woff') format('woff'), url('fonts/Blacker-Pro-Display-Regular.ttf') format('truetype'), url('fonts/Blacker-Pro-Display-Regular.svg') format('svg');
+	src: url('/assets_am-64/fonts/Blacker-Pro-Display-Regular.eot');
+	src: local('☺'), url('/assets_am-64/fonts/Blacker-Pro-Display-Regular.woff') format('woff'), url('fonts/Blacker-Pro-Display-Regular.ttf') format('truetype'), url('fonts/Blacker-Pro-Display-Regular.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -320,19 +320,19 @@ $unit: var(--unitMarge);
   }
 }
 .green-star{
-  background: url('assets/bg/green-star.svg') no-repeat;
+  background: url('/assets_am-64/bg/green-star.svg') no-repeat;
   background-size: contain;
   padding: 2rem 0 2rem 2rem;
   transform: translateX(-2rem);
 }
 .purple-star{
-  background: url('assets/bg/purple-star.svg') no-repeat;
+  background: url('/assets_am-64/bg/purple-star.svg') no-repeat;
   background-size: contain;
   padding: 2rem 0 2rem 2rem;
   transform: translateX(-2rem);
 }
 .yellow-star{
-  background: url('assets/bg/yellow-star.svg') no-repeat;
+  background: url('/assets_am-64/bg/yellow-star.svg') no-repeat;
   background-size: contain;
   padding: 1rem 0 1rem 2rem;
   transform: translateX(-2rem);
@@ -401,7 +401,7 @@ $unit: var(--unitMarge);
   div.svg-bg{
     width: 48px;
     height: 48px;
-    background: url('assets/bg/download.svg') no-repeat center;
+    background: url('/assets_am-64/bg/download.svg') no-repeat center;
     background-size: contain;
     max-height: 2.5em;
     margin-left: .35em;
@@ -418,7 +418,7 @@ $unit: var(--unitMarge);
 .superheros{
   display: inline-block;
   padding: 3.25em 3.5em;
-  background: url('assets/bg/superheros.svg') no-repeat center;
+  background: url('/assets_am-64/bg/superheros.svg') no-repeat center;
   background-size: contain;
   .cooper{
     line-height: .9;
@@ -445,7 +445,7 @@ $unit: var(--unitMarge);
   width: 65px;
   height: 22px;
   margin-right: .3rem;
-  background: url('assets/bg/arrow-yellow.svg') no-repeat center;
+  background: url('/assets_am-64/bg/arrow-yellow.svg') no-repeat center;
 }
 /* Backgrounds, image and colors */
 
@@ -632,7 +632,7 @@ header{
         white-space: nowrap;
         padding: .5rem 0;
         &.active{
-          background: url('assets/bg/pink-star.svg') no-repeat bottom right;
+          background: url('/assets_am-64/bg/pink-star.svg') no-repeat bottom right;
         }
         a{
           color: var(--blue2);
@@ -706,7 +706,7 @@ html{
   height: 44px;
   padding: 0;
   position: fixed;
-  background: url('assets/bg/scroll-to-top.svg') no-repeat center;
+  background: url('/assets_am-64/bg/scroll-to-top.svg') no-repeat center;
   background-size: contain;
   bottom: 2.25rem;
   right: 2.25rem;
@@ -721,7 +721,7 @@ html{
 
 section.big-cta{
   article{
-    background-image: url('assets/bg/star-points-yellow.png');
+    background-image: url('/assets_am-64/bg/star-points-yellow.png');
     background-repeat: no-repeat;
     background-position: left bottom;
     display: flex;
@@ -788,7 +788,7 @@ section.big-cta{
       position: absolute;
       z-index: 5;
       transform: translate(-3.5rem, -4.55rem);
-      background-image: url('assets/bg/superheros-noshadow.svg');
+      background-image: url('/assets_am-64/bg/superheros-noshadow.svg');
     }
   }
   @media(min-width: 1175px){
@@ -929,7 +929,7 @@ section.big-cta{
 
   h1 span:last-of-type{
     display: inline-block;
-    background: url('assets/bg/sun-1.svg') no-repeat;
+    background: url('/assets_am-64/bg/sun-1.svg') no-repeat;
     background-position: bottom right;
     padding-bottom: 0.5rem;
     padding-right: 2rem;
@@ -1039,7 +1039,7 @@ section.big-cta{
       div.wrapper{
         max-width: var(--maxWidth);
         margin: 0 auto;
-        background-image: url('assets/bg/star-points.png');
+        background-image: url('/assets_am-64/bg/star-points.png');
         background-repeat: no-repeat;
         @media (min-width: 960px){
           display: flex;
@@ -1082,7 +1082,7 @@ section.big-cta{
     }
     section:nth-of-type(4){
       > article{
-        background-image: url('assets/bg/star-points-yellow.png');
+        background-image: url('/assets_am-64/bg/star-points-yellow.png');
         background-repeat: no-repeat;
         background-size: contain;
         transform: rotate(-4deg);
@@ -1154,14 +1154,14 @@ section.big-cta{
 .se-former{
   h1 span:last-of-type{
     display: inline-block;
-    background: url('assets/bg/sun-2.svg') no-repeat;
+    background: url('/assets_am-64/bg/sun-2.svg') no-repeat;
     background-position: center;
     background-size: contain;
     padding-bottom: 1rem;
   }
   main{
     section:first-of-type{
-      background-image: url('assets/bg/splash-points-white.png');
+      background-image: url('/assets_am-64/bg/splash-points-white.png');
       background-repeat: no-repeat;
       background-position: calc(100% + 100px) -100px;
       background-size: 50%;
@@ -1196,7 +1196,7 @@ section.big-cta{
   }
   aside{
     section:first-of-type{
-      background-image: url('assets/bg/sun-2.svg');
+      background-image: url('/assets_am-64/bg/sun-2.svg');
       background-repeat: no-repeat;
       background-position: calc(100% + 190px) -190px;
       padding-bottom: 1.25rem;
@@ -1349,7 +1349,7 @@ section.big-cta{
       ul{
         font-size: .9rem;
         li{
-          background: url('assets/bg/arrow-purple.svg') no-repeat left center;
+          background: url('/assets_am-64/bg/arrow-purple.svg') no-repeat left center;
           padding: .5rem 0 .5rem 70px;
         }
       }

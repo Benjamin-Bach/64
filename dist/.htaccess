@@ -1,0 +1,18 @@
+
+RewriteEngine on
+
+# Exclusion des pages
+RewriteCond %{REQUEST_URI} !=/
+RewriteCond %{REQUEST_URI} !=/index.html
+RewriteCond %{REQUEST_URI} !=/decouvrir.html
+RewriteCond %{REQUEST_URI} !=/se-former.html
+RewriteCond %{REQUEST_URI} !=/exercer.html
+RewriteCond %{REQUEST_URI} !=/mentions-legales.html
+RewriteCond %{REQUEST_URI} !=/browserconfig.xml
+
+# Exclusion du répertoire d'assets
+RewriteCond %{REQUEST_URI} !^/assets_am-64/
+
+# Redirection 301 globale
+# DOMAINE A REMPLACER AVANT MISE EN LIGNE !!!
+RewriteRule (.*) http://autonomie64.fr/$1 [R=301,L]
