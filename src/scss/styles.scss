@@ -1158,34 +1158,37 @@ section.big-cta{
       @include superheros();
     }
     @media (min-width: 960px){
-      article{
-        max-width: 1100px;
-        &:first-of-type{
-          margin-top: 3rem;
-        }
-        display: flex;
-        justify-content: space-between;
-        gap: 3rem;
-        align-items: flex-end;
-        > a{
-          flex-basis: 540px;
-          .mb-1{
-            margin-bottom: 0;
-          }
-        }
-        .textes{
-          flex-grow: 1;
-        }
-        &:nth-of-type(even) .textes{
-          order: -1;
-        }
-        &:last-of-type{
-          margin-bottom: -10vw;
-          position: relative;
-          z-index: 1;
-          .textes{
+      section:first-of-type{
 
-            align-self: flex-start;
+        article{
+          max-width: 1100px;
+          &:first-of-type{
+            margin-top: 3rem;
+          }
+          display: flex;
+          justify-content: space-between;
+          gap: 3rem;
+          align-items: flex-end;
+          > a{
+            flex-basis: 540px;
+            .mb-1{
+              margin-bottom: 0;
+            }
+          }
+          .textes{
+            flex-grow: 1;
+          }
+          &:nth-of-type(even) .textes{
+            order: -1;
+          }
+          &:last-of-type{
+            margin-bottom: -10vw;
+            position: relative;
+            z-index: 1;
+            .textes{
+
+              align-self: flex-start;
+            }
           }
         }
       }
